@@ -4,14 +4,14 @@
 /*
 ** Methods
 */
-Fixed Point::getX()
+Fixed Point::getX() const
 {
-	return _x.toFloat();
+	return _x;
 }
 
-Fixed Point::getY()
+Fixed Point::getY() const
 {
-	return _y.toFloat();
+	return _y;
 }
 
 /*
@@ -31,16 +31,19 @@ Point::~Point()
 
 }
 
-Point::Point(const Point &point)
+Point::Point(const Point &point): _x(point.getX()), _y(point.getY())
 {
-	*this = point;
+	//*this = point;
 }
 
 Point& Point::operator = (const Point &point)
 {
-	if (this != point)
-	{
-		//do stuff
-	}
-	return *this;
+	// if (this != &point)
+	// {
+	// 	this->_x = point.getX();
+	// }
+	std::cout << point.getX() << "\n";
+	(void)point;
+	// Point* newPt= new Point(point);
+	return Point(point);
 }
