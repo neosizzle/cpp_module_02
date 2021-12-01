@@ -33,17 +33,21 @@ Point::~Point()
 
 Point::Point(const Point &point): _x(point.getX()), _y(point.getY())
 {
-	//*this = point;
+
 }
 
 Point& Point::operator = (const Point &point)
 {
-	// if (this != &point)
-	// {
-	// 	this->_x = point.getX();
-	// }
-	std::cout << point.getX() << "\n";
-	(void)point;
-	// Point* newPt= new Point(point);
-	return Point(point);
+	if (this != &point)
+	{
+		(void) point;
+		std::cout << "No values to assign, const values are immutable\n";
+	}
+	return *this;
+}
+
+std::ostream& operator << (std::ostream& os, const Point &point)
+{
+	os << "(" << point.getX() << ", " << point.getY() << ")";
+	return os;
 }
