@@ -37,7 +37,7 @@ Fixed::Fixed(const Fixed &fixed)
 
 Fixed& Fixed::operator = (const Fixed &fixed)
 {
-	std::cout<<"Assignment operator called \n";
+	std::cout<<"Assignation operator called \n";
 	if (this != &fixed)
 		//this->_fp_value = fixed._fp_value;
 		this->_fp_value = fixed.getRawBits(); //that missing line
