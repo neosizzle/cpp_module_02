@@ -26,8 +26,8 @@ int main( void ) {
 	std::cout << "b :" << b << std::endl;
 	std::cout << "c :" << c << std::endl;
 	std::cout << "Fixed::max(a,b) :" << Fixed::max( a, b ) << std::endl;
-	std::cout << "Fixed::min(a,b) :" << Fixed::min( a, b ) << std::endl << "\n";
-	std::cout << "Fixed(-1) / Fixed (5)" << Fixed(-1) / Fixed (5) << "\n";
+	std::cout << "Fixed::min(a,b) :" << Fixed::min( a, b ) << std::endl;
+	std::cout << "Fixed(-1) / Fixed (5) :" << Fixed(-1) / Fixed (5) << "\n\n";
 
 	std::cout << "DEFAULT CASES\n";
 	Fixed d;
